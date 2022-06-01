@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopAppG5.ResultsPage">
+    <Grid BackgroundColor="#b195d2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" Text="Results" TextColor="Beige" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="2" Text="Filtered Options shown here" BackgroundColor="Gray" FontSize="Subtitle" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+        <ListView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="itemList" Margin="20,20,20,20" BackgroundColor="#CDB0EE">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell  TextColor="white" Text="{Binding title}" ImageSource="{Binding imageURL}" Detail="{Binding detail}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+        </ListView>
+
+
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopAppG5.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+
+        </Grid.RowDefinitions>
+        <Frame  BackgroundColor="#CDB0EE"  Grid.Row="0" >
+
+            <Label VerticalOptions="Center" HorizontalOptions="Center" Text="Sign Up" TextColor="White" FontSize="Large"/>
+
+        </Frame>
+
+
+        <StackLayout  Grid.Row="1" Grid.RowSpan="5" Margin="30,50,30,50">
+            <Entry x:Name="userFirstName" Placeholder="First Name" Margin="0, 10, 0, 10" Keyboard="Text"/>
+            <Entry x:Name="userLastName" Placeholder="Last Name" Margin="0, 10, 0, 10" Keyboard="Text"/>
+            <Entry x:Name="userEmail" Placeholder="Email" Margin="0, 10, 0, 10" Keyboard="Email"/>
+            <Entry x:Name="userPassword" Placeholder="Password" Margin="0, 10, 0, 10" IsPassword="True"/>
+            <Entry x:Name="userConfirmPassword" Placeholder="Confirm Password" Margin="0, 10, 0, 10" IsPassword="True"/>
+
+            <Button Text="Register" BackgroundColor="#CDB0EE" TextColor="White"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Center" Text="OR" TextColor="Black" Margin="20, 10, 20, 10" FontAttributes="Bold"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Center" Text="Already have an account? Click Login button below" TextColor="Black" />
+
+            <Button Text="Login" BackgroundColor="#CDB0EE" TextColor="White"/>
+        </StackLayout>
+
+
+
+
+    </Grid>
+
+</ContentPage>
