@@ -13,9 +13,14 @@ namespace ShopAppG5
             // MainPage = new MainPage();
             //   MainPage = new Shoppin_cart_Page();
             // MainPage = new ResultsPage();
-            // MainPage = new HomePage();
-            MainPage = new Details();
+            //MainPage = new NavigationPage(new HomePage());
+            
+            MainPage = new NavigationPage(new HomePage());
+
+
         }
+
+           
 
         protected override void OnStart()
         {

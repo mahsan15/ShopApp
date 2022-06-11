@@ -29,7 +29,7 @@
 
         </StackLayout>
 
-        <Button Grid.Row ="5"  Text="Add To Cart" BackgroundColor="#CDB0EE" TextColor="White"  Margin="20, 10, 20, 10"/>
+        <Button Grid.Row ="5"  Text="Add To Cart" BackgroundColor="#CDB0EE" TextColor="White"  Margin="20, 10, 20, 10" Clicked="moveToCart"/>
 
     </Grid>
 </ContentPage>

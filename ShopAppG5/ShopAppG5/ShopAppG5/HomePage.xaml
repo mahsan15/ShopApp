@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShopAppG5.HomePage">
+
+    
+    
     <Grid BackgroundColor="#CDB0EE">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -29,6 +32,7 @@
                FontAttributes="Bold"
                FontSize="Title"
                Grid.ColumnSpan="5"
+               
                />
         <Image Grid.Row="0"
                Grid.Column="0"
@@ -44,6 +48,7 @@
                HorizontalOptions="End"
                 HeightRequest="10"
                 Grid.ColumnSpan="5"
+                Clicked="moveToLogin"
                 />
         <Label
             Grid.Row="1"
@@ -62,6 +67,7 @@
             Grid.Row="3"
             Grid.Column="0"
             Source="https://img.icons8.com/material/24/undefined/jumper.png"
+            
             />
         <Image
             Grid.Row="3"
@@ -93,14 +99,26 @@
             Grid.Row="5"
             Grid.Column="0"
             BackgroundColor="White"
-                   Grid.ColumnSpan="5"
+            Grid.ColumnSpan="5"
             />
+        
         <Image
             Grid.Row="6"
             Grid.Column="0"
             Source="https://cdn.pixabay.com/photo/2014/02/01/17/50/money-256281__340.jpg"
-            Grid.ColumnSpan="5"
+            Grid.ColumnSpan="5" 
             />
+
+
+        <Button Grid.Row="6"
+               Grid.Column="0"
+               Text="Details Page" 
+               HorizontalOptions="Center"
+               WidthRequest="250"
+               Grid.ColumnSpan="5" 
+               Clicked="moveToDetails"
+                />
+
         <Label
             Grid.Row="7"
                 Grid.Column="0"

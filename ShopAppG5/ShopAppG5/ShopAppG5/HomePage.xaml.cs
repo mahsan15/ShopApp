@@ -16,6 +16,9 @@ namespace ShopAppG5
         {
             InitializeComponent();
 
+            
+
+
             PriceFilter.Items.Add("Less than $10");
             PriceFilter.Items.Add("$10 - $25");
             PriceFilter.Items.Add("$25 - $50");
@@ -25,5 +28,20 @@ namespace ShopAppG5
             PriceFilter.Items.Add("$500 - $1,000");
             PriceFilter.Items.Add("More than $1,000");
         }
+
+        async void moveToLogin(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+
+            //await Navigation.PushAsync(new MainPage());
+        }
+
+        async void moveToDetails(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Details());
+
+            
+        }
+
     }
 }
