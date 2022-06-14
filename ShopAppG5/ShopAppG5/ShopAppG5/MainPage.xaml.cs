@@ -14,5 +14,7 @@ namespace ShopAppG5
         {
             InitializeComponent();
         }
+
+       
     }
 }

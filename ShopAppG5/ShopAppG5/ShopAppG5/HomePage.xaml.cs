@@ -25,5 +25,10 @@ namespace ShopAppG5
             PriceFilter.Items.Add("$500 - $1,000");
             PriceFilter.Items.Add("More than $1,000");
         }
+
+        async void moveToLogin(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
     }
 }

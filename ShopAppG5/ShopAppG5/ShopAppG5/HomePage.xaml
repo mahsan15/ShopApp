@@ -44,6 +44,7 @@
                HorizontalOptions="End"
                 HeightRequest="10"
                 Grid.ColumnSpan="5"
+                Clicked="moveToLogin"
                 />
         <Label
             Grid.Row="1"

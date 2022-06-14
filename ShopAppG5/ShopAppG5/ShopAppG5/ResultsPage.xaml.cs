@@ -48,9 +48,14 @@ namespace ShopAppG5
            var list = await networkAmazon.getSearchResults("xbox");
             itemList.ItemsSource = list;
         }
-        async void ShoppingCart_Clicked(System.Object sender, System.EventArgs e)
+        async void moveToDetails(System.Object sender, System.EventArgs e)
         {
-           await Navigation.PushAsync(new Shoppin_cart_Page());
+           await Navigation.PushAsync(new Details());
+        }
+
+        async void moveToShoppingCart(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Shoppin_cart_Page());
         }
     }
 }

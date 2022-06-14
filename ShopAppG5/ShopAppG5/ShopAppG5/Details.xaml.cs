@@ -16,5 +16,10 @@ namespace ShopAppG5
         {
             InitializeComponent();
         }
+
+        async void moveToShoppingCart(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Shoppin_cart_Page());
+        }
     }
 }

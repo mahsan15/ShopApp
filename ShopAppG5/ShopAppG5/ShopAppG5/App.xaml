@@ -4,5 +4,11 @@
              x:Class="ShopAppG5.App">
     <Application.Resources>
 
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="White"/>
+            <Setter Property="BarTextColor" Value="#CDB0EE" />
+        </Style>
+
     </Application.Resources>
+
 </Application>
