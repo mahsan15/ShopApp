@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopAppG5.HomePage">
+    <Grid BackgroundColor="#CDB0EE">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="270"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+
+
+
+
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               BackgroundColor="#B195D2"               
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Text="Group 5 Shopping"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontSize="Title"
+               Grid.ColumnSpan="5"
+               />
+        <Image Grid.Row="0"
+               Grid.Column="0"
+               Source="https://img.icons8.com/windows/96/undefined/shopping-bag-full.png"
+               HorizontalOptions="Start"
+               Grid.ColumnSpan="5"
+               />
+
+
+        <Button Grid.Row="0"
+               Grid.Column="0" 
+               Text="Login" 
+               HorizontalOptions="End"
+                HeightRequest="10"
+                Grid.ColumnSpan="5"
+                />
+        <Label
+            Grid.Row="1"
+                Grid.Column="0"
+              Text="Filter by Price:"
+            Grid.ColumnSpan="5"
+            />
+
+        <Picker x:Name="PriceFilter"
+                
+                Grid.Row="2"
+                Grid.Column="0"
+                BackgroundColor="White"
+                Grid.ColumnSpan="5"/>
+        <Image
+            Grid.Row="3"
+            Grid.Column="0"
+            Source="https://img.icons8.com/material/24/undefined/jumper.png"
+            />
+        <Image
+            Grid.Row="3"
+            Grid.Column="1"
+            Source="https://img.icons8.com/material/24/undefined/house-with-a-garden.png"
+            />
+        <Image
+            Grid.Row="3"
+            Grid.Column="2"
+            Source="https://img.icons8.com/material/24/undefined/generic-mouse.png"
+            />
+        <Image
+            Grid.Row="3"
+            Grid.Column="3"
+            Source="https://img.icons8.com/material/24/undefined/3d-monitor-.png"
+            />
+        <Image
+            Grid.Row="3"
+            Grid.Column="4"
+            Source="https://img.icons8.com/material/24/undefined/dumbbell--v1.png"
+            />
+        <Label
+            Grid.Row="4"
+                Grid.Column="0"
+              Text="Search for a Product:"
+            Grid.ColumnSpan="5"
+            />
+        <SearchBar x:Name="ItemSearch"
+            Grid.Row="5"
+            Grid.Column="0"
+            BackgroundColor="White"
+                   Grid.ColumnSpan="5"
+            />
+        <Image
+            Grid.Row="6"
+            Grid.Column="0"
+            Source="https://cdn.pixabay.com/photo/2014/02/01/17/50/money-256281__340.jpg"
+            Grid.ColumnSpan="5"
+            />
+        <Label
+            Grid.Row="7"
+                Grid.Column="0"
+              Text="Group 5 Shopping is an app which...(brief description)"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Grid.ColumnSpan="5"
+            
+            />
+    </Grid>
+</ContentPage>
