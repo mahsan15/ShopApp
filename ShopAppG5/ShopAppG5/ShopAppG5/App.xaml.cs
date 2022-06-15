@@ -10,11 +10,11 @@ namespace ShopAppG5
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ResultsPage());
+            //MainPage = new NavigationPage(new ResultsPage());
             //MainPage = new MainPage();
              // MainPage = new Shoppin_cart_Page();
             // MainPage = new ResultsPage();
-            // MainPage = new HomePage();
+             MainPage = new NavigationPage(new HomePage());
            // MainPage = new Details();
         }
 

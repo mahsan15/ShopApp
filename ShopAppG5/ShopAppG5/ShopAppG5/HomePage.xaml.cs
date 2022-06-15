@@ -16,19 +16,38 @@ namespace ShopAppG5
         {
             InitializeComponent();
 
-            PriceFilter.Items.Add("Less than $10");
-            PriceFilter.Items.Add("$10 - $25");
-            PriceFilter.Items.Add("$25 - $50");
-            PriceFilter.Items.Add("$50 - $100");
-            PriceFilter.Items.Add("$100 - $250");
-            PriceFilter.Items.Add("$250 - $500");
-            PriceFilter.Items.Add("$500 - $1,000");
-            PriceFilter.Items.Add("More than $1,000");
         }
 
         async void moveToLogin(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
+        }
+
+
+        async void moveToResult(System.Object sender, System.EventArgs e) {
+            string search = ItemSearch.Text;
+            int lowBound = 0;
+            int highBound = int.MaxValue;
+            if (!(String.IsNullOrEmpty(lowestBound.Text)))
+            {
+                lowBound = Int32.Parse(lowestBound.Text);
+                if (lowBound < 0)
+				{
+                    lowBound = 0;
+                }
+            }
+            if (!(String.IsNullOrEmpty(highestBound.Text)))
+			{
+                highBound = Int32.Parse(highestBound.Text);
+
+
+                if (highBound < 0)
+                {
+                    highBound = int.MaxValue;
+                }
+            }
+            Query qry = new Query(search, lowBound, highBound);
+            await Navigation.PushAsync(new ResultsPage(qry));
         }
     }
 }

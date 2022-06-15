@@ -16,14 +16,14 @@
 
         <StackLayout  Grid.Row="1" Grid.RowSpan="5" Margin="30,50,30,50" >
 
-            <Image Source="https://png.pngtree.com/png-clipart/20201205/ourmid/pngtree-cute-cartoon-style-bulldog-orange-short-legged-dog-clipart-png-image_2507303.jpg"/>
+            <Image x:Name ="itmImgSource" Source="https://png.pngtree.com/png-clipart/20201205/ourmid/pngtree-cute-cartoon-style-bulldog-orange-short-legged-dog-clipart-png-image_2507303.jpg"/>
 
-            <Label VerticalOptions="Center" HorizontalOptions="Center" Text="Dog" TextColor="#967BB6" Margin="20, 10, 20, 0" FontAttributes="Bold" FontSize="Large"/>
+            <Label x:Name ="itmName" VerticalOptions="Center" HorizontalOptions="Center" Text="Dog" TextColor="#967BB6" Margin="20, 10, 20, 0" FontAttributes="Bold" FontSize="Large"/>
 
-            <Label VerticalOptions="Center" HorizontalOptions="Center" Text="5$" TextColor="Black" FontSize="Medium"/>
+            <Label  x:Name ="itmPrice" VerticalOptions="Center" HorizontalOptions="Center" Text="5$" TextColor="Black" FontSize="Medium"/>
 
-            <Label VerticalOptions="Center" HorizontalOptions="Center" Text="Product Description" TextColor="#967BB6" Margin="20, 10, 20, 0" FontAttributes="Bold" FontSize="Large"/>
-            <Label HorizontalOptions="Center" 
+            <Label   VerticalOptions="Center" HorizontalOptions="Center" Text="Product Description" TextColor="#967BB6" Margin="20, 10, 20, 0" FontAttributes="Bold" FontSize="Large"/>
+            <Label  x:Name ="itmDescription" HorizontalOptions="Center" 
                    Text="ProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescription"
                    TextColor="Black" Margin="20, 0, 20, 10"/>
 

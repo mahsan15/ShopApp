@@ -49,16 +49,52 @@
         <Label
             Grid.Row="1"
                 Grid.Column="0"
-              Text="Filter by Price:"
+              Text="Price Range"
             Grid.ColumnSpan="5"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            FontAttributes="Bold"
+            FontSize ="24"
             />
-
-        <Picker x:Name="PriceFilter"
-                
+        <Entry
+            x:Name="lowestBound"
+            Placeholder="Min"
+            Keyboard="Numeric"
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="White"
+            FontAttributes="Bold"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            />
+        <Label
+            Grid.Row="2"
+            Grid.Column="2"
+            Text=" - " 
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            FontSize ="24"
+            FontAttributes="Bold"
+            />
+        <Entry
+            x:Name="highestBound"
+            Placeholder="Max"
+            Keyboard="Numeric"
+            Grid.Row="2"
+            Grid.Column="3"
+            BackgroundColor="White"
+            FontAttributes="Bold"
+            
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            />
+        <!--<Picker x:Name="PriceFilter"
                 Grid.Row="2"
                 Grid.Column="0"
                 BackgroundColor="White"
-                Grid.ColumnSpan="5"/>
+                Grid.ColumnSpan="5"
+                
+                SelectedIndex="{Binding SelectedFilter}"/>-->
         <Image
             Grid.Row="3"
             Grid.Column="0"
@@ -91,10 +127,12 @@
             Grid.ColumnSpan="5"
             />
         <SearchBar x:Name="ItemSearch"
+                   Placeholder="Enter item name here"
             Grid.Row="5"
             Grid.Column="0"
             BackgroundColor="White"
                    Grid.ColumnSpan="5"
+                   SearchButtonPressed="moveToResult"
             />
         <Image
             Grid.Row="6"

@@ -14,6 +14,11 @@ namespace ShopAppG5
     public partial class ResultsPage : ContentPage
     {
         NetworkAmazon networkAmazon = new NetworkAmazon();
+
+        public Query query { get; set; }
+
+        List<SearchAmazon> list;
+
         public class Item
         {
             public string title { get; set; }
@@ -43,14 +48,36 @@ namespace ShopAppG5
             InitializeComponent();
             
         }
+        public ResultsPage(Query qry)
+        {
+            InitializeComponent();
+            query = qry;
+
+        }
         override async protected void OnAppearing()
         {
-           var list = await networkAmazon.getSearchResults("xbox");
-            itemList.ItemsSource = list;
+           list = await networkAmazon.getSearchResults(query.searchLine);
+            if (list.Count > 0)
+            {
+                IEnumerable<SearchAmazon> qryResult = list.Where(itm => itm.price.value > query.priceLowerBound && itm.price.value < query.priceHigherBound);
+                
+                if (qryResult.Count() > 0)
+                {
+                    list = qryResult.ToList();
+                    itemList.ItemsSource = list;
+                }
+				else{
+                    queryResult.Text = "No results found";
+                }
+            }
+            
         }
         async void moveToDetails(System.Object sender, System.EventArgs e)
         {
-           await Navigation.PushAsync(new Details());
+            var itmObj = itemList.SelectedItem;
+            SearchAmazon item = (SearchAmazon) itmObj;
+
+            await Navigation.PushAsync(new Details(item));
         }
 
         async void moveToShoppingCart(System.Object sender, System.EventArgs e)

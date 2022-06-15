@@ -12,9 +12,17 @@ namespace ShopAppG5
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Details : ContentPage
     {
-        public Details()
+        SearchAmazon item;
+        public Details(SearchAmazon itm)
         {
             InitializeComponent();
+
+            item = itm;
+
+            itmImgSource.Source = item.image;
+            itmName.Text = item.title;
+            itmPrice.Text = item.price.value.ToString() + item.price.symbol;
+            itmDescription.Text = item.link;
         }
 
         async void moveToShoppingCart(System.Object sender, System.EventArgs e)

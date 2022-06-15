@@ -1365,21 +1365,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mnoso\\.nuget\\packages\\": {}
+    "C:\\Users\\Vlad\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mnoso\\source\\repos\\ShopApp-v1\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\ShopAppG5.iOS.csproj",
+      "projectUniqueName": "E:\\Seneca\\6 semester\\MAP526\\ShopApp-main\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\ShopAppG5.iOS.csproj",
       "projectName": "ShopAppG5.iOS",
-      "projectPath": "C:\\Users\\mnoso\\source\\repos\\ShopApp-v1\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\ShopAppG5.iOS.csproj",
-      "packagesPath": "C:\\Users\\mnoso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mnoso\\source\\repos\\ShopApp-v1\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\obj\\",
+      "projectPath": "E:\\Seneca\\6 semester\\MAP526\\ShopApp-main\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\ShopAppG5.iOS.csproj",
+      "packagesPath": "C:\\Users\\Vlad\\.nuget\\packages\\",
+      "outputPath": "E:\\Seneca\\6 semester\\MAP526\\ShopApp-main\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mnoso\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -1391,8 +1396,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\mnoso\\source\\repos\\ShopApp-v1\\ShopAppG5\\ShopAppG5\\ShopAppG5\\ShopAppG5.csproj": {
-              "projectPath": "C:\\Users\\mnoso\\source\\repos\\ShopApp-v1\\ShopAppG5\\ShopAppG5\\ShopAppG5\\ShopAppG5.csproj"
+            "E:\\Seneca\\6 semester\\MAP526\\ShopApp-main\\ShopAppG5\\ShopAppG5\\ShopAppG5\\ShopAppG5.csproj": {
+              "projectPath": "E:\\Seneca\\6 semester\\MAP526\\ShopApp-main\\ShopAppG5\\ShopAppG5\\ShopAppG5\\ShopAppG5.csproj"
             }
           }
         }
