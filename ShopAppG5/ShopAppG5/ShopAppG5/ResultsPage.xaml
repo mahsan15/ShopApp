@@ -24,7 +24,7 @@
 
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" Text="Results" TextColor="Beige" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Label Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="2" Text="Filtered Options shown here" BackgroundColor="Gray" FontSize="Subtitle" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label x:Name="apiFil" Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="2" Text="Filtered Options shown here" BackgroundColor="Gray" FontSize="Subtitle" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
         <Label  x:Name="queryResult" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="" FontAttributes="Bold" FontSize="20"/>
         <ListView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="itemList" Margin="20,20,20,20" BackgroundColor="#CDB0EE" ItemTapped="moveToDetails">
