@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopAppG5.Android", "ShopAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopAppG5.iOS", "ShopAppG5\ShopAppG5.iOS\ShopAppG5.iOS.csproj", "{2ED644F5-7444-4345-9E0D-C6202AF60C55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopAppG5", "ShopAppG5\ShopAppG5\ShopAppG5.csproj", "{43F55A57-130C-4AFF-B693-2D931634B4F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopAppG5", "ShopAppG5\ShopAppG5\ShopAppG5.csproj", "{43F55A57-130C-4AFF-B693-2D931634B4F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

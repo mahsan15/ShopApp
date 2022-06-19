@@ -23,6 +23,10 @@ namespace ShopAppG5
             await Navigation.PushAsync(new MainPage());
         }
 
+        async void moveToShoppingCart(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Shoppin_cart_Page());
+        }
 
         async void moveToResult(System.Object sender, System.EventArgs e) {
             string search = ItemSearch.Text;
@@ -46,6 +50,9 @@ namespace ShopAppG5
                     highBound = int.MaxValue;
                 }
             }
+
+            
+
             Query qry = new Query(search, lowBound, highBound);
             await Navigation.PushAsync(new ResultsPage(qry));
         }
