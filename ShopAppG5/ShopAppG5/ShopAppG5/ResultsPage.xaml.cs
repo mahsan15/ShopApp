@@ -30,6 +30,7 @@ namespace ShopAppG5
             InitializeComponent();
             query = qry;
 
+
         }
         override async protected void OnAppearing()
         {
