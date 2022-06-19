@@ -21,7 +21,15 @@ namespace ShopAppG5
 
             itmImgSource.Source = item.image;
             itmName.Text = item.title;
-            itmPrice.Text = item.price.symbol + item.price.value.ToString();
+            if (itm.price.raw == "Unknown price")
+            {
+                itmPrice.Text = "No price info";
+                cartButton.IsVisible = false;
+            }
+            else
+            {
+                itmPrice.Text = item.price.raw;
+            }
             itmDescription.Text = item.link;
         }
 

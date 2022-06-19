@@ -2,6 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShopAppG5.HomePage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+            <ImageButton HorizontalOptions="End" VerticalOptions="Center" Source="shopCart.png" HeightRequest="45" WidthRequest="45" Clicked="moveToShoppingCart"/>
+
+        </StackLayout>
+
+    </NavigationPage.TitleView>
     <Grid BackgroundColor="#CDB0EE">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -95,7 +103,7 @@
                 Grid.ColumnSpan="5"
                 
                 SelectedIndex="{Binding SelectedFilter}"/>-->
-        <Image
+        <!--<Image
             Grid.Row="3"
             Grid.Column="0"
             Source="https://img.icons8.com/material/24/undefined/jumper.png"
@@ -118,13 +126,19 @@
         <Image
             Grid.Row="3"
             Grid.Column="4"
-            Source="https://img.icons8.com/material/24/undefined/dumbbell--v1.png"
-            />
+            Source="https://img.icons8.com/material/24/undefined/dumbbell-v1.png" at the end of source of this image there is should be double -, not one
+            />-->
+        
         <Label
-            Grid.Row="4"
-                Grid.Column="0"
-              Text="Search for a Product:"
+            Grid.Row="3"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Text="Search for a Product:"
             Grid.ColumnSpan="5"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
             />
         <SearchBar x:Name="ItemSearch"
                    Placeholder="Enter item name here"
@@ -137,13 +151,15 @@
         <Image
             Grid.Row="6"
             Grid.Column="0"
-            Source="https://cdn.pixabay.com/photo/2014/02/01/17/50/money-256281__340.jpg"
+            Source="amazonAndEbay.jpeg"
             Grid.ColumnSpan="5"
+            
+            
             />
         <Label
             Grid.Row="7"
                 Grid.Column="0"
-              Text="Group 5 Shopping is an app which...(brief description)"
+              Text="Group 5 Shopping App"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Grid.ColumnSpan="5"

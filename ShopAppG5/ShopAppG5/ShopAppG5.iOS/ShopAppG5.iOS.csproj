@@ -133,4 +133,10 @@
       <Name>ShopAppG5</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\amazonAndEbay.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shopCart.png" />
+  </ItemGroup>
 </Project>

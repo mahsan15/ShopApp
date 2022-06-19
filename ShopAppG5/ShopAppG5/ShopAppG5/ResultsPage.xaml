@@ -5,7 +5,6 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" HorizontalOptions="End">
-            <Label Text="Shopping Cart" HorizontalOptions="Center"/>
             <ImageButton HorizontalOptions="End" VerticalOptions="Center" Source="shopCart.png" HeightRequest="45" WidthRequest="45" Clicked="moveToShoppingCart"/>
 
         </StackLayout>
@@ -23,14 +22,15 @@
             <RowDefinition Height="*"></RowDefinition>
 
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" Text="Results" TextColor="Beige" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Label Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="2" Text="Filtered Options shown here" BackgroundColor="Gray" FontSize="Subtitle" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" Text="Results" TextColor="Beige" FontAttributes="Bold" FontSize="30"  HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label x:Name ="filteredOption" Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="2" Text="" TextColor="Beige"  FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-        <Label  x:Name="queryResult" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="" FontAttributes="Bold" FontSize="20"/>
-        <ListView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="itemList" Margin="20,20,20,20" BackgroundColor="#CDB0EE" ItemTapped="moveToDetails">
+        <Label  x:Name="queryResult" IsVisible="true" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Text="Loading..." FontAttributes="Bold" FontSize="20"/>
+        <ListView Grid.Row="2" IsVisible="false" Grid.Column="0" Grid.ColumnSpan="2" x:Name="itemList" Margin="20,20,20,20" BackgroundColor="#CDB0EE" ItemTapped="moveToDetails">
+
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell  TextColor="white" Text="{Binding title}" ImageSource="{Binding image}" Detail="{Binding link}"/>
+                    <ImageCell  TextColor="white" Text="{Binding title}" ImageSource="{Binding image}" Detail="{Binding price.raw} "/>
                 </DataTemplate>
             </ListView.ItemTemplate>
 

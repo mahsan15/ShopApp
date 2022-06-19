@@ -34,21 +34,53 @@ namespace ShopAppG5
         override async protected void OnAppearing()
         {
            list = await networkAmazon.getSearchResults(query.searchLine);
+
+            if (query.priceHigherBound == int.MaxValue && query.priceLowerBound == 0)
+            {
+                filteredOption.Text = "Price range: Any price";
+            }
+            else if (query.priceHigherBound == int.MaxValue && query.priceLowerBound != 0)
+            {
+                filteredOption.Text = "Price range: " + query.priceLowerBound + "and above $";
+            }
+            else
+            {
+                filteredOption.Text = "Price range: from " + query.priceLowerBound + " to " + query.priceHigherBound + "$";
+            }
+
+            //for test
+            list.Add(new SearchProduct(1));
             if (list.Count > 0)
             {
-                IEnumerable<SearchProduct> qryResult = list.Where(itm => itm.price.value > query.priceLowerBound && itm.price.value < query.priceHigherBound);
-                
+                IEnumerable<SearchProduct> qryResult = list.Where(itm => (itm.price.value == -1) || (itm.price.value > query.priceLowerBound && itm.price.value < query.priceHigherBound));
+
+
+
                 if (qryResult.Count() > 0)
                 {
                     list = qryResult.ToList();
                     itemList.ItemsSource = list;
+
+
+                    itemList.IsVisible = true;
+                    queryResult.IsVisible = false;
+
                 }
 				else{
-                    queryResult.Text = "No results found";
+                    itemList.IsVisible = false;
+                    queryResult.IsVisible = true;
+                    queryResult.Text = "No results found in your price range";
                 }
             }
+            else
+            {
+                itemList.IsVisible = false;
+                queryResult.IsVisible = true;
+                queryResult.Text = "No results found for this item name";
 
-            
+            }
+
+
 
         }
         async void moveToDetails(System.Object sender, System.EventArgs e)

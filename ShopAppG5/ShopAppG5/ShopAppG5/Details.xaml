@@ -2,6 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShopAppG5.Details">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+            <ImageButton HorizontalOptions="End" VerticalOptions="Center" Source="shopCart.png" HeightRequest="45" WidthRequest="45" Clicked="moveToShoppingCart"/>
+
+        </StackLayout>
+
+    </NavigationPage.TitleView>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -18,18 +26,18 @@
 
             <Image x:Name ="itmImgSource" Source="https://png.pngtree.com/png-clipart/20201205/ourmid/pngtree-cute-cartoon-style-bulldog-orange-short-legged-dog-clipart-png-image_2507303.jpg"/>
 
-            <Label x:Name ="itmName" VerticalOptions="Center" HorizontalOptions="Center" Text="Dog" TextColor="#967BB6" Margin="20, 10, 20, 0" FontAttributes="Bold" FontSize="Large"/>
+            <Label x:Name ="itmName" VerticalOptions="Center" HorizontalOptions="Center" Text="Dog" TextColor="#967BB6" Margin="20, 10, 20, 0" FontAttributes="Bold" FontSize="16"/>
 
-            <Label  x:Name ="itmPrice" VerticalOptions="Center" HorizontalOptions="Center" Text="5$" TextColor="Black" FontSize="Medium"/>
+            <Label  x:Name ="itmPrice" VerticalOptions="Center" HorizontalOptions="Center" Text="5$" TextColor="Black" FontSize="16"/>
 
-            <Label   VerticalOptions="Center" HorizontalOptions="Center" Text="Product link" TextColor="#967BB6" Margin="20, 10, 20, 0" FontAttributes="Bold" FontSize="Large"/>
+            <Label   VerticalOptions="Center" HorizontalOptions="Center" Text="Product link" TextColor="#967BB6" Margin="20, 10, 20, 0" FontAttributes="Bold" FontSize="16"/>
             <Label  x:Name ="itmDescription" HorizontalOptions="Center" 
                    Text="ProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescriptionProductDescription"
                    TextColor="Black" Margin="20, 0, 20, 10"/>
 
         </StackLayout>
 
-        <Button Grid.Row ="5"  Text="Add To Cart" BackgroundColor="#CDB0EE" TextColor="White"  Margin="20, 10, 20, 10" Clicked="moveToShoppingCart"/>
+        <Button x:Name="cartButton"  Grid.Row ="5"  Text="Add To Cart" IsVisible="true" BackgroundColor="#CDB0EE" TextColor="White"  Margin="20, 10, 20, 10" Clicked="moveToShoppingCart"/>
 
     </Grid>
 </ContentPage>

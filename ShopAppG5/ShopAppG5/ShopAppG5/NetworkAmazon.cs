@@ -27,8 +27,12 @@ namespace ShopAppG5
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
                 var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonString);
-                var array = dic.ElementAt(3).Value;
-                list = JsonConvert.DeserializeObject<List<SearchProduct>>(array.ToString());
+                if (!jsonString.Contains("\"success\":false"))
+                {
+                    var array = dic.ElementAt(3).Value;
+                    list = JsonConvert.DeserializeObject<List<SearchProduct>>(array.ToString());
+                }
+                
       
             }
 
@@ -41,22 +45,27 @@ namespace ShopAppG5
             }
             else
             {
-                var jsonString = await response2.Content.ReadAsStringAsync();
-                var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonString);
-                var array = dic.ElementAt(3).Value;
-                var finalList = JsonConvert.DeserializeObject<List<SearchProduct>>(array.ToString());
-                foreach (SearchProduct itm in finalList)
+                try
                 {
-                    list.Add(itm);
-                }
-                foreach (SearchProduct itm in list)
-                {
-                    if(itm.price == null)
-                    {
-                        itm.price = new Price();
+                    var jsonString = await response2.Content.ReadAsStringAsync();
+                    var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonString);
+					//validation
+					if (jsonString.Contains("\"success\":false")) {
+                        return list;
                     }
+
+					var array = dic.ElementAt(3).Value;
+                    var finalList = JsonConvert.DeserializeObject<List<SearchProduct>>(array.ToString());
+                    foreach (SearchProduct itm in finalList)
+                    {
+                        list.Add(itm);
+                    }
+
+                    list = list.OrderBy(o => o.price.value).ToList();
+				}
+				catch(Exception e) {
+                    return list;
                 }
-                list = list.OrderBy(o => o.price.value).ToList();
                 return list;
             }
         }

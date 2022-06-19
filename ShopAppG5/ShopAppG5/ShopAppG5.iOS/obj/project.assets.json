@@ -1365,24 +1365,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ahsan\\.nuget\\packages\\": {},
+    "C:\\Users\\Vlad\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahsan\\Desktop\\seneca_sem6\\MAP526\\newnew\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\ShopAppG5.iOS.csproj",
+      "projectUniqueName": "E:\\GitFolder\\ShopApp\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\ShopAppG5.iOS.csproj",
       "projectName": "ShopAppG5.iOS",
-      "projectPath": "C:\\Users\\Ahsan\\Desktop\\seneca_sem6\\MAP526\\newnew\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\ShopAppG5.iOS.csproj",
-      "packagesPath": "C:\\Users\\Ahsan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahsan\\Desktop\\seneca_sem6\\MAP526\\newnew\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\obj\\",
+      "projectPath": "E:\\GitFolder\\ShopApp\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\ShopAppG5.iOS.csproj",
+      "packagesPath": "C:\\Users\\Vlad\\.nuget\\packages\\",
+      "outputPath": "E:\\GitFolder\\ShopApp\\ShopAppG5\\ShopAppG5\\ShopAppG5.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ahsan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1396,8 +1396,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Ahsan\\Desktop\\seneca_sem6\\MAP526\\newnew\\ShopAppG5\\ShopAppG5\\ShopAppG5\\ShopAppG5.csproj": {
-              "projectPath": "C:\\Users\\Ahsan\\Desktop\\seneca_sem6\\MAP526\\newnew\\ShopAppG5\\ShopAppG5\\ShopAppG5\\ShopAppG5.csproj"
+            "E:\\GitFolder\\ShopApp\\ShopAppG5\\ShopAppG5\\ShopAppG5\\ShopAppG5.csproj": {
+              "projectPath": "E:\\GitFolder\\ShopApp\\ShopAppG5\\ShopAppG5\\ShopAppG5\\ShopAppG5.csproj"
             }
           }
         }

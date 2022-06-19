@@ -84,7 +84,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\shopCart.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShopAppG5\ShopAppG5.csproj">
@@ -94,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\shopCart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\amazonAndEbay.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
