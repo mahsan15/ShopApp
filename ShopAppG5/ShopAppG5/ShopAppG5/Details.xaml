@@ -37,7 +37,7 @@
 
         </StackLayout>
 
-        <Button x:Name="cartButton"  Grid.Row ="5"  Text="Add To Cart" IsVisible="true" BackgroundColor="#CDB0EE" TextColor="White"  Margin="20, 10, 20, 10" Clicked="moveToShoppingCart"/>
+        <Button x:Name="cartButton"  Grid.Row ="5"  Text="Add To Cart" IsVisible="true" BackgroundColor="#CDB0EE" TextColor="White"  Margin="20, 10, 20, 10" Clicked="addToCart"/>
 
     </Grid>
 </ContentPage>

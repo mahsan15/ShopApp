@@ -6,6 +6,19 @@ namespace ShopAppG5
 {
     public partial class App : Application
     {
+        static Database database;
+
+        public static Database Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new Database();
+                }
+                return database;
+            }
+        }
         public App()
         {
             InitializeComponent();

@@ -33,6 +33,11 @@ namespace ShopAppG5
             itmDescription.Text = item.link;
         }
 
+        async void addToCart(System.Object sender, System.EventArgs e)
+        {
+            App.Database.SaveProductAsync(item);
+            await Navigation.PushAsync(new Shoppin_cart_Page());
+        }
         async void moveToShoppingCart(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new Shoppin_cart_Page());

@@ -41,16 +41,33 @@
                 Grid.Column="4" 
                 Source="https://cdn.pixabay.com/photo/2013/07/12/14/53/cart-148964_960_720.png"
                 />
+            
+            <Label  x:Name="queryResult" IsVisible="true" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" HorizontalOptions="Center" VerticalOptions="Center" Text="Loading..." FontAttributes="Bold" FontSize="20"/>
+            <ListView Grid.Row="2" IsVisible="true" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="5" x:Name="shoppingCartList" BackgroundColor="#CDB0EE">
 
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell  TextColor="white" Text="{Binding title}" ImageSource="{Binding image}" Detail="{Binding price.raw}">
+                        <ImageCell.ContextActions>
+                            <MenuItem Text="Delete"
+                                      CommandParameter="{Binding .}"
+                                      IsDestructive="True"
+                                      Clicked="deleteItem_Clicked"/>
+                            </ImageCell.ContextActions>
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                </ListView>
+            
 
-            <Image Grid.Row="2" Grid.Column="0" WidthRequest="80"  Source="https://uralcases.ru/wp-content/uploads/2021/09/iphone-13-pink-select-2021.png"></Image>
+            <!--<Image Grid.Row="2" Grid.Column="0" WidthRequest="80"  Source="https://uralcases.ru/wp-content/uploads/2021/09/iphone-13-pink-select-2021.png"></Image>
             <Label Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="20" Text="Iphone 13" Grid.ColumnSpan="3"/>
             <Button Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Text="Remove item"/>
 
 
             <Image Grid.Row="3" Grid.Column="0" WidthRequest="80"  Source="https://cdn.pixabay.com/photo/2016/12/08/15/42/time-1892012_960_720.png"></Image>
             <Label Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="20" Text="Pretty clocks" Grid.ColumnSpan="3"/>
-            <Button Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Text="Remove item"/>
+            <Button Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Text="Remove item"/>-->
 
 
 

@@ -16,5 +16,24 @@ namespace ShopAppG5
         {
             InitializeComponent();
         }
+
+        async protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            List<SearchProduct> shoppingCart = await App.Database.GetProductAsync();
+            shoppingCartList.ItemsSource = shoppingCart;
+        }
+
+        async void deleteItem_Clicked(System.Object sender, System.EventArgs e)
+        {
+            MenuItem item = (sender as MenuItem);
+            SearchProduct toDelete = item.CommandParameter as SearchProduct;
+            await App.Database.DeleteProductAsync(toDelete);
+
+            shoppingCartList.ItemsSource = null;
+
+            List<SearchProduct> shoppingCart = await App.Database.GetProductAsync();
+            shoppingCartList.ItemsSource = shoppingCart;
+        }
     }
 }
