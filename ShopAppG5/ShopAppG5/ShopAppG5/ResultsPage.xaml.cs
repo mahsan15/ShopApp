@@ -29,7 +29,7 @@ namespace ShopAppG5
         {
             InitializeComponent();
             query = qry;
-
+            apiFil.Text = qry.apiFilter;
         }
         override async protected void OnAppearing()
         {

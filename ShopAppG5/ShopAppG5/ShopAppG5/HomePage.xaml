@@ -8,6 +8,7 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="270"/>
@@ -88,60 +89,61 @@
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
             />
-        <!--<Picker x:Name="PriceFilter"
-                Grid.Row="2"
-                Grid.Column="0"
+     
+          <Picker x:Name="apiFilter"
+                  Title="Select a Website"
+                Grid.Row="3"
+                Grid.Column="1"
+                  Grid.ColumnSpan="3"
                 BackgroundColor="White"
-                Grid.ColumnSpan="5"
-                
-                SelectedIndex="{Binding SelectedFilter}"/>-->
+                SelectedIndexChanged="apiFilter_SelectedIndexChanged"/>
         <Image
-            Grid.Row="3"
+            Grid.Row="4"
             Grid.Column="0"
             Source="https://img.icons8.com/material/24/undefined/jumper.png"
             />
         <Image
-            Grid.Row="3"
+            Grid.Row="4"
             Grid.Column="1"
             Source="https://img.icons8.com/material/24/undefined/house-with-a-garden.png"
             />
         <Image
-            Grid.Row="3"
+            Grid.Row="4"
             Grid.Column="2"
             Source="https://img.icons8.com/material/24/undefined/generic-mouse.png"
             />
         <Image
-            Grid.Row="3"
+            Grid.Row="4"
             Grid.Column="3"
             Source="https://img.icons8.com/material/24/undefined/3d-monitor-.png"
             />
         <Image
-            Grid.Row="3"
+            Grid.Row="4"
             Grid.Column="4"
             Source="https://img.icons8.com/material/24/undefined/dumbbell--v1.png"
             />
         <Label
-            Grid.Row="4"
+            Grid.Row="5"
                 Grid.Column="0"
               Text="Search for a Product:"
             Grid.ColumnSpan="5"
             />
         <SearchBar x:Name="ItemSearch"
                    Placeholder="Enter item name here"
-            Grid.Row="5"
+            Grid.Row="6"
             Grid.Column="0"
             BackgroundColor="White"
                    Grid.ColumnSpan="5"
                    SearchButtonPressed="moveToResult"
             />
         <Image
-            Grid.Row="6"
+            Grid.Row="7"
             Grid.Column="0"
             Source="https://cdn.pixabay.com/photo/2014/02/01/17/50/money-256281__340.jpg"
             Grid.ColumnSpan="5"
             />
         <Label
-            Grid.Row="7"
+            Grid.Row="8"
                 Grid.Column="0"
               Text="Group 5 Shopping is an app which...(brief description)"
             HorizontalOptions="Center"
