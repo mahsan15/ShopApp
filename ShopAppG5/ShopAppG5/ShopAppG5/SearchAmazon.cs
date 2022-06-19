@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace ShopAppG5
 {
-    public class SearchAmazon
+    public class SearchProduct
     {
         public int position { get; set; }
         public string title { get; set; }
@@ -13,8 +13,14 @@ namespace ShopAppG5
         public string image { get; set; }
 
         public Price price { get; set; }
-        public SearchAmazon() { }
+        public SearchProduct() {
+            position = 0;
+            title = "";
+            link = "";
+            image = "";
+        }
     }
+
 
     public class Price
     {
@@ -22,5 +28,14 @@ namespace ShopAppG5
         public string currency { get; set; }
 
         public string symbol { get; set; }
+
+        public Price() { value = 0;
+            currency = "USD";
+            symbol = "$";
+        }
+        
     }
+
+
+
 }

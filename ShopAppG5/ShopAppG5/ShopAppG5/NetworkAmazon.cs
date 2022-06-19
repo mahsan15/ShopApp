@@ -12,23 +12,55 @@ namespace ShopAppG5
     {
         HttpClient httpClient = new HttpClient();
         //Task<List<SearchAmazon>
-        public async Task<List<SearchAmazon>> getSearchResults(string keywords)
+        public async Task<List<SearchProduct>> getSearchResults(string keywords)
         {
-            string amazonapi = "https://api.rainforestapi.com/request?api_key=780E6F45A029446B9F26A94D85541AEC&type=search&amazon_domain=amazon.com&search_term=" + keywords;
+        
+            string amazonapi = "https://api.countdownapi.com/request?api_key=8C1D5A761F1D4A78B659624BB1218953&type=search&ebay_domain=ebay.com&search_term=" + keywords;
+            List<SearchProduct> list = new List<SearchProduct>();
 
             var response = await httpClient.GetAsync(amazonapi);
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                return new List<SearchAmazon>();
+                
             }
             else
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
                 var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonString);
                 var array = dic.ElementAt(3).Value;
-                var finalList = JsonConvert.DeserializeObject<List<SearchAmazon>>(array.ToString());
-                return finalList;
+                list = JsonConvert.DeserializeObject<List<SearchProduct>>(array.ToString());
+      
+            }
+
+            string amazonapi2 = "https://api.rainforestapi.com/request?api_key=66B0E667B1524819B5025C371F6510C7&type=search&amazon_domain=amazon.com&search_term=" + keywords;
+
+            var response2 = await httpClient.GetAsync(amazonapi2);
+            if (response2.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return list;
+            }
+            else
+            {
+                var jsonString = await response2.Content.ReadAsStringAsync();
+                var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonString);
+                var array = dic.ElementAt(3).Value;
+                var finalList = JsonConvert.DeserializeObject<List<SearchProduct>>(array.ToString());
+                foreach (SearchProduct itm in finalList)
+                {
+                    list.Add(itm);
+                }
+                foreach (SearchProduct itm in list)
+                {
+                    if(itm.price == null)
+                    {
+                        itm.price = new Price();
+                    }
+                }
+                list = list.OrderBy(o => o.price.value).ToList();
+                return list;
             }
         }
+
+
     }
 }

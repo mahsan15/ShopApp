@@ -12,8 +12,8 @@ namespace ShopAppG5
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Details : ContentPage
     {
-        SearchAmazon item;
-        public Details(SearchAmazon itm)
+        SearchProduct item;
+        public Details(SearchProduct itm)
         {
             InitializeComponent();
 
@@ -21,7 +21,7 @@ namespace ShopAppG5
 
             itmImgSource.Source = item.image;
             itmName.Text = item.title;
-            itmPrice.Text = item.price.value.ToString() + item.price.symbol;
+            itmPrice.Text = item.price.symbol + item.price.value.ToString();
             itmDescription.Text = item.link;
         }
 

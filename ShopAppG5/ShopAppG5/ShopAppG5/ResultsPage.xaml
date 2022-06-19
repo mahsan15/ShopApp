@@ -30,7 +30,7 @@
         <ListView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="itemList" Margin="20,20,20,20" BackgroundColor="#CDB0EE" ItemTapped="moveToDetails">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell  TextColor="white" Text="{Binding title}" ImageSource="{Binding image}" Detail="{Binding link}" />
+                    <ImageCell  TextColor="white" Text="{Binding title}" ImageSource="{Binding image}" Detail="{Binding link}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
 
