@@ -30,7 +30,9 @@
                 Grid.Row="1" 
                 Grid.ColumnSpan="5"
                 Text="Your Items" 
-                FontSize="32"
+                FontSize="25"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
                 FontAttributes="Bold" 
                 Padding="15,10,30,15"/>
 
@@ -85,7 +87,7 @@
                     <Label
                         x:Name="shoppingCartTotal"
                          Margin="0,0,0,10"
-                         Text="Total"
+                         Text="Total: "
                          TextColor="White" 
                          FontSize="26"/>
 

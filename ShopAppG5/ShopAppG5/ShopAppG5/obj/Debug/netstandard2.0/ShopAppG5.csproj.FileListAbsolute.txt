@@ -73,3 +73,4 @@ E:\GitFolder\ShopApp\ShopAppG5\ShopAppG5\ShopAppG5\obj\Debug\netstandard2.0\Xaml
 E:\GitFolder\ShopApp\ShopAppG5\ShopAppG5\ShopAppG5\obj\Debug\netstandard2.0\ShopAppG5.dll
 E:\GitFolder\ShopApp\ShopAppG5\ShopAppG5\ShopAppG5\obj\Debug\netstandard2.0\ref\ShopAppG5.dll
 E:\GitFolder\ShopApp\ShopAppG5\ShopAppG5\ShopAppG5\obj\Debug\netstandard2.0\ShopAppG5.pdb
+E:\GitFolder\ShopApp\ShopAppG5\ShopAppG5\ShopAppG5\obj\Debug\netstandard2.0\ShopAppG5.csproj.AssemblyReference.cache

@@ -22,6 +22,16 @@ namespace ShopAppG5
             base.OnAppearing();
             List<ShoppingCart> shoppingCart = await App.Database.GetShoppingAsync();
             shoppingCartList.ItemsSource = shoppingCart;
+            double total = 0;
+            foreach (var val in shoppingCart)
+			{
+                if (!string.IsNullOrEmpty(val.price))
+                {
+                    string tempstr = val.price.Remove(0,1);
+                    total += double.Parse(tempstr);
+                }
+			}
+            shoppingCartTotal.Text = "Total: " + total + "$";
         }
 
         async void deleteItem_Clicked(System.Object sender, System.EventArgs e)
@@ -34,6 +44,14 @@ namespace ShopAppG5
 
             List<ShoppingCart> shoppingCart = await App.Database.GetShoppingAsync();
             shoppingCartList.ItemsSource = shoppingCart;
+
+            double total = 0;
+            foreach (var val in shoppingCart)
+            {
+                string tempstr = val.price.Remove(0);
+                total += double.Parse(tempstr);
+            }
+            shoppingCartTotal.Text = "Total: " + total + "$";
         }
 
         //async void moveToDetails(System.Object sender, System.EventArgs e)

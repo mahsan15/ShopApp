@@ -98,38 +98,7 @@
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
             />
-        <!--<Picker x:Name="PriceFilter"
-                Grid.Row="2"
-                Grid.Column="0"
-                BackgroundColor="White"
-                Grid.ColumnSpan="5"
-                
-                SelectedIndex="{Binding SelectedFilter}"/>-->
-        <!--<Image
-            Grid.Row="3"
-            Grid.Column="0"
-            Source="https://img.icons8.com/material/24/undefined/jumper.png"
-            />
-        <Image
-            Grid.Row="3"
-            Grid.Column="1"
-            Source="https://img.icons8.com/material/24/undefined/house-with-a-garden.png"
-            />
-        <Image
-            Grid.Row="3"
-            Grid.Column="2"
-            Source="https://img.icons8.com/material/24/undefined/generic-mouse.png"
-            />
-        <Image
-            Grid.Row="3"
-            Grid.Column="3"
-            Source="https://img.icons8.com/material/24/undefined/3d-monitor-.png"
-            />
-        <Image
-            Grid.Row="3"
-            Grid.Column="4"
-            Source="https://img.icons8.com/material/24/undefined/dumbbell-v1.png" at the end of source of this image there is should be double -, not one
-            />-->
+
         
         <Label
             Grid.Row="3"
@@ -167,7 +136,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Margin="5, 10, 0, 0">
                             <Label TextColor="Black" HorizontalOptions="Center" Text="{Binding searchLine}"/>
                             <Label TextColor="Black" HorizontalOptions="Center" Text="  "/>
                             <Label TextColor="Black" HorizontalOptions="Center" Text="{Binding priceLowerBound}"/>
