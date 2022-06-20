@@ -17,6 +17,8 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="270"/>
         </Grid.RowDefinitions>
@@ -148,8 +150,46 @@
                    Grid.ColumnSpan="5"
                    SearchButtonPressed="moveToResult"
             />
-        <Image
+        <Label
             Grid.Row="6"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Text="Saved Search History:"
+            Grid.ColumnSpan="5"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            />
+
+        <Label  x:Name="queryResult" IsVisible="true" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="5" HorizontalOptions="Center" VerticalOptions="Center" Text="Loading..." FontAttributes="Bold" FontSize="20"/>
+        <ListView Grid.Row="7" IsVisible="true" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="1" x:Name="queryList" BackgroundColor="white" ItemTapped="moveToQueryResult">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label TextColor="Black" HorizontalOptions="Center" Text="{Binding searchLine}"/>
+                            <Label TextColor="Black" HorizontalOptions="Center" Text="  "/>
+                            <Label TextColor="Black" HorizontalOptions="Center" Text="{Binding priceLowerBound}"/>
+                            <Label TextColor="Black" HorizontalOptions="Center" Text=" - "/>
+                            <Label TextColor="Black" HorizontalOptions="Center" Text="{Binding priceHigherBound}"/>
+                            <Label TextColor="Black" HorizontalOptions="Center" Text="  $"/>
+                        </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete"
+                                      CommandParameter="{Binding .}"
+                                      IsDestructive="True"
+                                      Clicked="deleteItem_Clicked"/>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+        
+        <Image
+            Grid.Row="8"
             Grid.Column="0"
             Source="amazonAndEbay.jpeg"
             Grid.ColumnSpan="5"
@@ -157,7 +197,7 @@
             
             />
         <Label
-            Grid.Row="7"
+            Grid.Row="9"
                 Grid.Column="0"
               Text="Group 5 Shopping App"
             HorizontalOptions="Center"

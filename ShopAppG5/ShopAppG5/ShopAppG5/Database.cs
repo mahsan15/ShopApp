@@ -18,6 +18,7 @@ namespace ShopAppG5
             _database = new SQLiteAsyncConnection(path);
             _database.CreateTableAsync<SearchProduct>().Wait();
             _database.CreateTableAsync<Price>().Wait();
+            _database.CreateTableAsync<Query>().Wait();
         }
 
         public Task<List<SearchProduct>> GetProductAsync()
@@ -41,6 +42,21 @@ namespace ShopAppG5
         }
 
         public Task<int> DeleteProductAsync(SearchProduct toDelete)
+        {
+            return _database.DeleteAsync(toDelete);
+        }
+
+        public Task<List<Query>> GetQueryAsync()
+        {
+            return _database.Table<Query>().ToListAsync();
+        }
+
+        public Task<int> SaveQueryAsync(Query query)
+        {
+            return _database.InsertAsync(query);
+        }
+
+        public Task<int> DeleteQueryAsync(Query toDelete)
         {
             return _database.DeleteAsync(toDelete);
         }

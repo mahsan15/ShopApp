@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,8 @@ namespace ShopAppG5
 {
 	public class Query
 	{
+		[PrimaryKey, AutoIncrement]
+		public int key { get; set; }
 		public string searchLine { get; set; }
 		public int priceLowerBound { get; set; }
 		public int priceHigherBound { get; set; }
