@@ -42,7 +42,7 @@ namespace ShopAppG5
             }
             else if (query.priceHigherBound == int.MaxValue && query.priceLowerBound != 0)
             {
-                filteredOption.Text = "Price range: " + query.priceLowerBound + "and above $";
+                filteredOption.Text = "Price range: " + query.priceLowerBound + " and above $";
             }
             else
             {
@@ -53,7 +53,7 @@ namespace ShopAppG5
             //list.Add(new SearchProduct(1));
             if (list.Count > 0)
             {
-                IEnumerable<SearchProduct> qryResult = list.Where(itm => (itm.price.value == -1) || (itm.price.value > query.priceLowerBound && itm.price.value < query.priceHigherBound));
+                IEnumerable<SearchProduct> qryResult = list.Where(itm => (itm.price.value == -1) || (itm.price.value > query.priceLowerBound && itm.price.value < query.priceHigherBound)).OrderBy(itm=> itm.price.value);
 
 
 
