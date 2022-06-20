@@ -26,7 +26,7 @@ namespace ShopAppG5
             image = "";
             price = new Price();
         }
-
+   
         //for testing
         public SearchProduct(int let)
         {
@@ -58,6 +58,23 @@ namespace ShopAppG5
         
     }
 
+    public class ShoppingCart
+    {
+        [PrimaryKey, AutoIncrement]
+        public int key { get; set; }
+        public string title { get; set; }
+        public string link { get; set; }
+        public string image { get; set; }
+
+        public string price { get; set; }
+        public ShoppingCart() { }
+        public ShoppingCart(string t, string l, string i, string p) {
+            title = t;
+            link = l;
+            image = i;
+            price = p;
+        }
+    }
 
 
 }

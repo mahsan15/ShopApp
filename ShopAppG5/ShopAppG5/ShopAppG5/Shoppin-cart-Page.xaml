@@ -43,11 +43,11 @@
                 />
             
             <Label  x:Name="queryResult" IsVisible="true" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" HorizontalOptions="Center" VerticalOptions="Center" Text="Loading..." FontAttributes="Bold" FontSize="20"/>
-            <ListView Grid.Row="2" IsVisible="true" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="5" x:Name="shoppingCartList" BackgroundColor="#CDB0EE" ItemTapped="moveToDetails">
+            <ListView Grid.Row="2" IsVisible="true" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="5" x:Name="shoppingCartList" BackgroundColor="#CDB0EE">
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ImageCell  TextColor="white" Text="{Binding title}" ImageSource="{Binding image}" Detail="{Binding price.raw}">
+                        <ImageCell  TextColor="white" Text="{Binding title}" ImageSource="{Binding image}" Detail="{Binding price}">
                         <ImageCell.ContextActions>
                             <MenuItem Text="Delete"
                                       CommandParameter="{Binding .}"
@@ -83,6 +83,7 @@
                 <StackLayout Margin="30,0,30,0">
 
                     <Label
+                        x:Name="shoppingCartTotal"
                          Margin="0,0,0,10"
                          Text="Total"
                          TextColor="White" 

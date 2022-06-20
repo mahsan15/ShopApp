@@ -20,28 +20,28 @@ namespace ShopAppG5
         async protected override void OnAppearing()
         {
             base.OnAppearing();
-            List<SearchProduct> shoppingCart = await App.Database.GetProductAsync();
+            List<ShoppingCart> shoppingCart = await App.Database.GetShoppingAsync();
             shoppingCartList.ItemsSource = shoppingCart;
         }
 
         async void deleteItem_Clicked(System.Object sender, System.EventArgs e)
         {
             MenuItem item = (sender as MenuItem);
-            SearchProduct toDelete = item.CommandParameter as SearchProduct;
-            await App.Database.DeleteProductAsync(toDelete);
+            ShoppingCart toDelete = item.CommandParameter as ShoppingCart;
+            await App.Database.DeleteShoppingAsync(toDelete);
 
             shoppingCartList.ItemsSource = null;
 
-            List<SearchProduct> shoppingCart = await App.Database.GetProductAsync();
+            List<ShoppingCart> shoppingCart = await App.Database.GetShoppingAsync();
             shoppingCartList.ItemsSource = shoppingCart;
         }
 
-        async void moveToDetails(System.Object sender, System.EventArgs e)
-        {
-            var itmObj = shoppingCartList.SelectedItem;
-            SearchProduct item = (SearchProduct)itmObj;
+        //async void moveToDetails(System.Object sender, System.EventArgs e)
+        //{
+        //    var itmObj = shoppingCartList.SelectedItem;
+        //    SearchProduct item = (SearchProduct) itmObj;
 
-            await Navigation.PushAsync(new Details(item));
-        }
+        //    await Navigation.PushAsync(new Details(item));
+        //}
     }
 }

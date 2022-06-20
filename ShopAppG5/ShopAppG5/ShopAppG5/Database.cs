@@ -19,6 +19,7 @@ namespace ShopAppG5
             _database.CreateTableAsync<SearchProduct>().Wait();
             _database.CreateTableAsync<Price>().Wait();
             _database.CreateTableAsync<Query>().Wait();
+            _database.CreateTableAsync<ShoppingCart>().Wait();
         }
 
         public Task<List<SearchProduct>> GetProductAsync()
@@ -57,6 +58,21 @@ namespace ShopAppG5
         }
 
         public Task<int> DeleteQueryAsync(Query toDelete)
+        {
+            return _database.DeleteAsync(toDelete);
+        }
+
+        public Task<List<ShoppingCart>> GetShoppingAsync()
+        {
+            return _database.Table<ShoppingCart>().ToListAsync();
+        }
+
+        public Task<int> SaveShoppingAsync(ShoppingCart shoppingCart)
+        {
+            return _database.InsertAsync(shoppingCart);
+        }
+
+        public Task<int> DeleteShoppingAsync(ShoppingCart toDelete)
         {
             return _database.DeleteAsync(toDelete);
         }

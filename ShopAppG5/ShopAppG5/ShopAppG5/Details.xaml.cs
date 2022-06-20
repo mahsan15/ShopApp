@@ -35,7 +35,8 @@ namespace ShopAppG5
 
         async void addToCart(System.Object sender, System.EventArgs e)
         {
-            App.Database.SaveProductAsync(item);
+            ShoppingCart cart = new ShoppingCart(item.title, item.link, item.image, item.price.raw);
+            App.Database.SaveShoppingAsync(cart);
             await Navigation.PushAsync(new Shoppin_cart_Page());
         }
         async void moveToShoppingCart(System.Object sender, System.EventArgs e)
