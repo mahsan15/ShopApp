@@ -52,6 +52,22 @@ namespace ShopAppG5
                 colour = "white";
             }
         }
+        public void update()
+		{
+            if (link.Contains("amazon.com"))
+            {
+                colour = "blue";
+
+            }
+            else if (link.Contains("ebay.com"))
+            {
+                colour = "red";
+            }
+            else
+            {
+                colour = "white";
+            }
+        }
     }
 
     [Table("Prices")]
@@ -66,8 +82,7 @@ namespace ShopAppG5
         public string symbol { get; set; }
 
         public Price() { value = -1;
-            //raw = "Unknown price"; uncomment this line in final version of app
-            raw = "999 $";
+            raw = "Unknown price";
             currency = "USD";
             symbol = "$";
         }

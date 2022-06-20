@@ -50,7 +50,7 @@ namespace ShopAppG5
             }
 
             //for test
-            list.Add(new SearchProduct(1));
+            //list.Add(new SearchProduct(1));
             if (list.Count > 0)
             {
                 IEnumerable<SearchProduct> qryResult = list.Where(itm => (itm.price.value == -1) || (itm.price.value > query.priceLowerBound && itm.price.value < query.priceHigherBound));
@@ -60,6 +60,11 @@ namespace ShopAppG5
                 if (qryResult.Count() > 0)
                 {
                     list = qryResult.ToList();
+
+                    foreach (var val in list)
+					{
+                        val.update();
+					}
                     itemList.ItemsSource = list;
 
 
