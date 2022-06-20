@@ -43,7 +43,7 @@
                 />
             
             <Label  x:Name="queryResult" IsVisible="true" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" HorizontalOptions="Center" VerticalOptions="Center" Text="Loading..." FontAttributes="Bold" FontSize="20"/>
-            <ListView Grid.Row="2" IsVisible="true" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="5" x:Name="shoppingCartList" BackgroundColor="#CDB0EE">
+            <ListView Grid.Row="2" IsVisible="true" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="5" x:Name="shoppingCartList" BackgroundColor="#CDB0EE" ItemTapped="moveToDetails">
 
                 <ListView.ItemTemplate>
                     <DataTemplate>

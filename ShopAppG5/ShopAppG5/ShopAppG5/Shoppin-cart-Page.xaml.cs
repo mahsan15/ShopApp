@@ -35,5 +35,13 @@ namespace ShopAppG5
             List<SearchProduct> shoppingCart = await App.Database.GetProductAsync();
             shoppingCartList.ItemsSource = shoppingCart;
         }
+
+        async void moveToDetails(System.Object sender, System.EventArgs e)
+        {
+            var itmObj = shoppingCartList.SelectedItem;
+            SearchProduct item = (SearchProduct)itmObj;
+
+            await Navigation.PushAsync(new Details(item));
+        }
     }
 }
